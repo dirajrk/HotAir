@@ -5,9 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.view.View;
+import android.content.SharedPreferences;
 
 public class LoginActivity extends AppCompatActivity {
     private Button button;
+    SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +25,7 @@ public class LoginActivity extends AppCompatActivity {
         String userPass = "";
         if (view == button){
             Intent intent = new Intent(this, MainActivity.class);
-            intent.putExtra("ID",userID);
-            intent.putExtra("Pass",userPass);
+            preferences.edit().clear().putString("id",userID).putString("pass",userPass).apply();
             startActivity(intent);
         }
     }
