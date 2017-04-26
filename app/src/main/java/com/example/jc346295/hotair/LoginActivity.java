@@ -14,12 +14,11 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
-
     }
-    protected void onClick(View view){
+
+    public void onClick(View view){
         Button button = (Button) findViewById(R.id.button);
-        //both these variables are placeholders
+        //both these values are placeholders
         String userID = "";
         String userPass = "";
         if (view == button){
