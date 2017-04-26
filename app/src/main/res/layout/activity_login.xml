@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jc346295.hotair.MainActivity">
+    tools:context="com.example.jc346295.hotair.LoginActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,7 +30,7 @@
 
     <EditText
         android:id="@+id/editText2"
-        android:text="@string/email"
+        android:hint="@string/email"
         android:layout_width="349dp"
         android:layout_height="39dp"
         android:ems="10"
@@ -40,7 +40,7 @@
 
     <EditText
         android:id="@+id/editText3"
-        android:text="@string/password"
+        android:hint="@string/password"
         android:layout_width="350dp"
         android:layout_height="41dp"
         android:ems="10"
