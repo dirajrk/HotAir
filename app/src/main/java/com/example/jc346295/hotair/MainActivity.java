@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onClick(View view){
+    protected void onClick(View view){
         reportButton = (ImageButton) findViewById(R.id.reportButton);
         if (view == reportButton){
             Intent intent = new Intent(this, Report.class);
