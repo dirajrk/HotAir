@@ -5,7 +5,11 @@
     <string name="email">Email</string>
     <string name="forgot_pw">Forgot Password</string>
     <string name="sign_up">Sign Up</string>
-    <string name="welcome_messages">Welcome, %1$s, with password, %2$s</string>
+    <string name="welcome_messages">Welcome, User!</string>
+    <string name="ordermsg">Time Of Order</string>
+    <string name="orderdate">21/12/17</string>
+    <string name="etamsg">ETA:</string>
+    <string name="etadate">25/12/17</string>
 
 
 </resources>

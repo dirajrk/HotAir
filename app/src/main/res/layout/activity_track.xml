@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jc346295.hotair.TrackActivity">
+
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/welcome_messages" />
+
+    <ImageButton
+        android:id="@+id/homeButton"
+        android:layout_width="25sp"
+        android:layout_height="25sp"
+        android:background="@drawable/home"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/orderTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/ordermsg" />
+
+    <TextView
+        android:id="@+id/orderDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/orderdate" />
+
+    <TextView
+        android:id="@+id/etaTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/etamsg" />
+
+    <TextView
+        android:id="@+id/etaDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/etadate" />
+
+    <ImageButton
+        android:id="@+id/trackButton"
+        android:layout_width="25sp"
+        android:layout_height="25sp"
+        android:background="@drawable/track"
+        android:padding="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Track" />
+
+    <ImageButton
+        android:id="@+id/reportButton"
+        android:layout_width="25sp"
+        android:layout_height="25sp"
+        android:background="@drawable/warning"
+        android:padding="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Report" />
+
+    <ImageButton
+        android:id="@+id/historyButton"
+        android:layout_width="25sp"
+        android:layout_height="25sp"
+        android:background="@drawable/history"
+        android:padding="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="History" />
+
+    <ImageButton
+        android:id="@+id/notifButton"
+        android:layout_width="25sp"
+        android:layout_height="25sp"
+        android:background="@drawable/notif"
+        android:padding="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Notif" />
+
+
+</LinearLayout>
