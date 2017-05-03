@@ -23,6 +23,8 @@
             <ImageButton
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:id="@+id/trackButton"
+                android:onClick="onClick"
                 android:background="@drawable/track" />
             <TextView
                 android:layout_width="wrap_content"
@@ -67,6 +69,8 @@
             <ImageButton
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:id="@+id/historyButton"
+                android:onClick="onClick"
                 android:background="@drawable/history" />
             <TextView
                 android:layout_width="wrap_content"
@@ -83,6 +87,8 @@
             <ImageButton
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:id="@+id/notifButton"
+                android:onClick="onClick"
                 android:background="@drawable/notif" />
             <TextView
                 android:layout_width="wrap_content"

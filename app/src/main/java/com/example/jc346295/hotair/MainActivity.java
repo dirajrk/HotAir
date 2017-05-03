@@ -7,12 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.content.SharedPreferences;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     ImageButton reportButton;
-    SharedPreferences preferences;
+    ImageButton historyButton;
     TextView welcomeUser;
 
     @Override
@@ -20,18 +19,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         welcomeUser = (TextView) findViewById(R.id.userWelcome);
-        String userID = preferences.getString("pass",null);
-        String userPass = preferences.getString("id", null);
-        welcomeUser.setText(getString(R.string.welcome_messages, userID));
+        welcomeUser.setText(getString(R.string.welcome_messages));
 
 
     }
 
     public void onClick(View view){
         reportButton = (ImageButton) findViewById(R.id.reportButton);
+        historyButton = (ImageButton) findViewById(R.id.historyButton);
         if (view == reportButton){
             Intent intent = new Intent(this, Report.class);
             startActivity(intent);
         }
+        else if (view == historyButton){
+            Intent intent = new Intent(this, HistoryActivity.class);
+            startActivity(intent);
+        }
+
     }
+
 }
