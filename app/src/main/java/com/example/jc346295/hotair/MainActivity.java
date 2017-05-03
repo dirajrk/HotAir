@@ -27,18 +27,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View view){
-        if (view == reportButton){
-            Intent intent = new Intent(this, Report.class);
+        if (view == historyButton){
+            Intent intent = new Intent(this, HistoryActivity.class);
             startActivity(intent);
         }
-        else if (view == historyButton){
-            Intent intent = new Intent(this, HistoryActivity.class);
-            startActivity(intent);
-        } else if (view == trackButton) {
-            Intent intent = new Intent(this, HistoryActivity.class);
+        else if (view == trackButton) {
+            Intent intent = new Intent(this, TrackActivity.class);
             startActivity(intent);
         }
 
     }
 
+    public void report(View view){
+        Intent intent = new Intent(this, Report.class);
+        startActivity(intent);
+    }
 }
