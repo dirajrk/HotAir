@@ -3,102 +3,185 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.jc346295.hotair.TrackActivity">
 
-
-    <TextView
-        android:id="@+id/welcomeText"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/welcome_messages" />
+        android:layout_height="wrap_content">
 
-    <ImageButton
-        android:id="@+id/homeButton"
-        android:layout_width="25sp"
-        android:layout_height="25sp"
-        android:background="@drawable/home"
-        android:padding="10dp" />
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/welcome_messages" />
 
-    <TextView
-        android:id="@+id/orderTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/ordermsg" />
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_marginLeft="250dp"
+            android:background="@drawable/home"
+            android:padding="10dp" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/orderDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/orderdate" />
-
-    <TextView
-        android:id="@+id/etaTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/etamsg" />
-
-    <TextView
-        android:id="@+id/etaDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/etadate" />
-
-    <ImageButton
-        android:id="@+id/trackButton"
-        android:layout_width="25sp"
-        android:layout_height="25sp"
-        android:background="@drawable/track"
-        android:padding="10dp" />
-
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Track" />
+        android:orientation="horizontal">
 
-    <ImageButton
-        android:id="@+id/reportButton"
-        android:layout_width="25sp"
-        android:layout_height="25sp"
-        android:background="@drawable/warning"
-        android:padding="10dp" />
+        <TextView
+            android:id="@+id/orderTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="@string/ordermsg" />
 
-    <TextView
+        <TextView
+            android:id="@+id/orderDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/orderdate" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Report" />
+        android:orientation="horizontal">
 
-    <ImageButton
-        android:id="@+id/historyButton"
-        android:layout_width="25sp"
-        android:layout_height="25sp"
-        android:background="@drawable/history"
-        android:padding="10dp" />
+        <TextView
+            android:id="@+id/etaTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="@string/etamsg" />
 
-    <TextView
+        <TextView
+            android:id="@+id/etaDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/etadate" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="History" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/notifButton"
-        android:layout_width="25sp"
-        android:layout_height="25sp"
-        android:background="@drawable/notif"
-        android:padding="10dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Notif" />
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginRight="50dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/track" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Track" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/warning" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Report" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginRight="50dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/history" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="History" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/notif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Notification" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 
 
 </LinearLayout>
