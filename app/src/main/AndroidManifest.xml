@@ -27,7 +27,15 @@
         <activity android:name=".Report" />
         <activity android:name=".HistoryActivity" />
         <activity android:name=".TrackActivity" />
-        <activity android:name=".NotifActivity"></activity>
+        <activity android:name=".NotifActivity" />
+
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+        <user-permission android:name="android.permission.BLUETOOTH" />
+
+        <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
+        <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     </application>
 
 </manifest>
