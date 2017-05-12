@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton reportButton;
     ImageButton historyButton;
     ImageButton trackButton;
+    ImageButton notifButton;
     TextView welcomeUser;
 
     @Override
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         reportButton = (ImageButton) findViewById(R.id.reportButton);
         historyButton = (ImageButton) findViewById(R.id.historyButton);
         trackButton = (ImageButton) findViewById(R.id.trackButton);
+        notifButton = (ImageButton) findViewById(R.id.notifButton);
 
     }
 
@@ -34,7 +36,10 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, HistoryActivity.class);
             startActivity(intent);
         } else if (view == trackButton) {
-            Intent intent = new Intent(this, HistoryActivity.class);
+            Intent intent = new Intent(this, TrackActivity.class);
+            startActivity(intent);
+        } else if (view == notifButton) {
+            Intent intent = new Intent(this, NotifActivity.class);
             startActivity(intent);
         }
 

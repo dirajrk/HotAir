@@ -1,10 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.jc346295.hotair.TrackActivity">
+    tools:context="com.example.jc346295.hotair.NotifActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -33,21 +31,19 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/orderMessage"
+            android:id="@+id/orderTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="Your Order has Arrived!" />
+            android:text="@string/ordermsg" />
 
-        <ImageButton
-            android:id="@+id/landButton"
-            android:layout_width="75sp"
-            android:layout_height="75sp"
-            android:layout_below="@id/orderMessage"
-            android:layout_marginLeft="250dp"
-            android:background="@drawable/plus"
-            android:padding="10dp" />
+        <TextView
+            android:id="@+id/orderDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/orderdate" />
     </LinearLayout>
 
     <LinearLayout
@@ -62,14 +58,14 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="Landing:" />
+            android:text="@string/etamsg" />
 
         <TextView
             android:id="@+id/etaDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="House" />
+            android:text="@string/etadate" />
 
     </LinearLayout>
 
@@ -186,6 +182,5 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
 
 </LinearLayout>
