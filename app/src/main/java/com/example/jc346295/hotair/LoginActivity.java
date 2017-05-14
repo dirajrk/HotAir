@@ -21,10 +21,20 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        button = (Button) findViewById(R.id.button);
 
     }
 
+    public void onClick(View view){
+        if(view == button){
+            Intent intent = new Intent(view.getContext(), MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    }
+}
 
+/***
     @Override
     protected void onStart() {
         super.onStart();
@@ -69,4 +79,4 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
-}
+}***/
