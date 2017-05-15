@@ -10,6 +10,11 @@
     <string name="orderdate">21/12/17</string>
     <string name="etamsg">ETA: </string>
     <string name="etadate">25/12/17</string>
+    <string-array name="issues">
+        <item>Dead on Arrival</item>
+        <item>Wrong Item</item>
+        <item>Damaged Product</item>
+    </string-array>
 
 
 </resources>

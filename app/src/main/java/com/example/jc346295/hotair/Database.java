@@ -42,11 +42,10 @@ public class Database extends SQLiteOpenHelper {
         String sql = "CREATE TABLE " + USER_TABLE_NAME
                 + " (" + ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + USERNAME + " TEXT, "
-                + PASSWORD + " TEXT, "
-                + ORDERS + " INTEGER);";
+                + PASSWORD + " TEXT" + ");";
         db.execSQL(sql);
 
-        sql = "INSERT INTO user (username,pass) VALUES (nathanaeln,baygon1);";
+        sql = "INSERT INTO user (username,pass) VALUES (USER,baygon1);";
         db.execSQL(sql);
 
         sql = "INSERT INTO user (username,pass) VALUES (fadnihdr,1234);";
