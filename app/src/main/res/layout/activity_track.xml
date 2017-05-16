@@ -74,8 +74,8 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="200dp"
-        android:layout_height="200dp">
+        android:layout_width="800dp"
+        android:layout_height="300dp">
 
         <fragment
             android:id="@+id/map"
