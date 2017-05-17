@@ -108,6 +108,7 @@
                 android:orientation="vertical">
 
                 <ImageButton
+                    android:id="@+id/trackButton"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center"
@@ -126,6 +127,7 @@
                 android:orientation="vertical">
 
                 <ImageButton
+                    android:id="@+id/reportButton"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center"
@@ -154,6 +156,7 @@
                 android:orientation="vertical">
 
                 <ImageButton
+                    android:id="@+id/historyButton"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center"
@@ -172,6 +175,7 @@
                 android:orientation="vertical">
 
                 <ImageButton
+                    android:id="@+id/notifButton"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center"
