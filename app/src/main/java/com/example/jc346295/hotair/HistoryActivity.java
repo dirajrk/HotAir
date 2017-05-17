@@ -8,13 +8,18 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
+import java.util.HashMap;
 import java.util.Map;
 
 public class HistoryActivity extends AppCompatActivity {
 
     ArrayAdapter<Java> stringArray;
     SharedPreferences preferences;
+    TextView welcomeUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +27,9 @@ public class HistoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_history);
         preferences = getSharedPreferences("values",MODE_PRIVATE);
         preferences.edit().clear().apply();
+        String username = getIntent().getExtras().getString("username");
+        welcomeUser = (TextView) findViewById(R.id.userWelcome);
+        welcomeUser.setText(getString(R.string.welcome_messages, username));
     }
 
     public void Home(View view){

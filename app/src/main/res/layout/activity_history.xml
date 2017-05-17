@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10sp"
-            android:text="@string/welcome_messages" />
+            android:text="@string/order_history" />
 
         <ImageButton
             android:id="@+id/homeButton"
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="10sp"
             android:layout_weight="1"
-            android:text="Your Order has Arrived!" />
+            android:text="Deliveries" />
     </LinearLayout>
 
     <ListView
