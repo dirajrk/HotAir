@@ -1,30 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.jc346295.hotair.HistoryActivity">
 
-    <TextView
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:text="@string/welcome_messages" />
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_marginLeft="275sp"
+            android:background="@drawable/home"
+            android:padding="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome Back, Mario"
-        android:layout_marginTop="40dp"
-        android:id="@+id/userWelcome"/>
+        android:layout_gravity="center"
+        android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/homeButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@drawable/home"
-        android:onClick="Home"/>
+        <TextView
+            android:id="@+id/orderMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10sp"
+            android:layout_weight="1"
+            android:text="Your Order has Arrived!" />
+    </LinearLayout>
 
     <ListView
         android:id="@+id/listView"
-        android:layout_alignParentTop="true"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20sp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="0sp"
+            android:layout_marginTop="10sp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="100sp"
+                android:layout_height="120sp"
+                android:layout_marginRight="50sp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/trackButton"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/track" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Track" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100sp"
+                android:layout_height="120sp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/reportButton"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/warning" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Report" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="100sp"
+                android:layout_height="120sp"
+                android:layout_marginBottom="30sp"
+                android:layout_marginRight="50sp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/historyButton"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/history" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="History" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100sp"
+                android:layout_height="120sp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/notifButton"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/notif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Notification" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
 
 </LinearLayout>
