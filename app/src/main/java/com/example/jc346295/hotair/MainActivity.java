@@ -18,8 +18,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        String username = getIntent().getExtras().getString("username");
         welcomeUser = (TextView) findViewById(R.id.userWelcome);
-        welcomeUser.setText(getString(R.string.welcome_messages));
+        welcomeUser.setText(getString(R.string.welcome_messages, username));
 
         reportButton = (ImageButton) findViewById(R.id.reportButton);
         historyButton = (ImageButton) findViewById(R.id.historyButton);
