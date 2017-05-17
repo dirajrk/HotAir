@@ -19,8 +19,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button button;
     private EditText userName;
     private EditText userPass;
-    public Map<String,String> users;
-
+    private Map<String,String> users;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,7 +108,19 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-            else {
+            else if (users.containsKey(input1) && !users.get(input1).equals(input2)){
+                new AlertDialog.Builder(view.getContext())
+                        .setTitle("Wrong password")
+                        .setMessage("You have dementia fam")
+                        .show();
+            }
+            else if (!users.containsKey(input1) && users.get(input1).equals(input2)){
+                new AlertDialog.Builder(view.getContext())
+                        .setTitle("Wrong password")
+                        .setMessage("You have dementia fam")
+                        .show();
+            }
+            else{
                 new AlertDialog.Builder(view.getContext())
                         .setTitle("No username")
                         .setMessage("You're not cool enough to be in the database!")
