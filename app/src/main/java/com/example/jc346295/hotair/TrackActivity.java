@@ -28,6 +28,8 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
     ImageButton reportButton;
     ImageButton historyButton;
     ImageButton trackButton;
+    ImageButton notifButton;
+    ImageButton homeButton;
     GoogleMap map;
     LocationManager locationManager;
 
@@ -56,6 +58,8 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
         reportButton = (ImageButton) findViewById(R.id.reportButton);
         historyButton = (ImageButton) findViewById(R.id.historyButton);
         trackButton = (ImageButton) findViewById(R.id.trackButton);
+        notifButton = (ImageButton) findViewById(R.id.notifButton);
+        homeButton = (ImageButton) findViewById(R.id.homeButton);
     }
 
     public void onClick(View view) {
@@ -68,8 +72,13 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
         } else if (view == trackButton) {
             Intent intent = new Intent(this, TrackActivity.class);
             startActivity(intent);
+        } else if (view == homeButton) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        } else if (view == notifButton) {
+            Intent intent = new Intent(this, NotifActivity.class);
+            startActivity(intent);
         }
-
     }
 
     @Override
