@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton historyButton;
     ImageButton trackButton;
     ImageButton notifButton;
+    ImageButton navButton;
     TextView welcomeUser;
     String username;
 
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         historyButton = (ImageButton) findViewById(R.id.historyButton);
         trackButton = (ImageButton) findViewById(R.id.trackButton);
         notifButton = (ImageButton) findViewById(R.id.notifButton);
+        navButton = (ImageButton) findViewById(R.id.navButton);
 
     }
 
@@ -40,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         } else if (view == trackButton) {
             Intent intent = new Intent(this, TrackActivity.class);
+            startActivity(intent);
+        } else if (view == navButton) {
+            Intent intent = new Intent(this, NavActivity.class);
             startActivity(intent);
         } else if (view == notifButton) {
             Intent intent = new Intent(this, NotifActivity.class);
