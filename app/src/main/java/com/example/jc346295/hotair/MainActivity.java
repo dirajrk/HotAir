@@ -11,22 +11,21 @@ public class MainActivity extends AppCompatActivity {
     ImageButton reportButton;
     ImageButton historyButton;
     ImageButton trackButton;
-    ImageButton notifButton;
     TextView welcomeUser;
-    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        username = getIntent().getExtras().getString("username");
         welcomeUser = (TextView) findViewById(R.id.userWelcome);
-        welcomeUser.setText(getString(R.string.welcome_messages, username));
+        welcomeUser.setText(getString(R.string.welcome_messages));
 
         reportButton = (ImageButton) findViewById(R.id.reportButton);
         historyButton = (ImageButton) findViewById(R.id.historyButton);
         trackButton = (ImageButton) findViewById(R.id.trackButton);
-        notifButton = (ImageButton) findViewById(R.id.notifButton);
+
+        Bundle b=this.getIntent().getExtras();
+        String[] array=b.getStringArray(key);
 
     }
 
@@ -36,13 +35,9 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         } else if (view == historyButton) {
             Intent intent = new Intent(this, HistoryActivity.class);
-            intent.putExtra("username",username);
             startActivity(intent);
         } else if (view == trackButton) {
             Intent intent = new Intent(this, TrackActivity.class);
-            startActivity(intent);
-        } else if (view == notifButton) {
-            Intent intent = new Intent(this, NotifActivity.class);
             startActivity(intent);
         }
 
