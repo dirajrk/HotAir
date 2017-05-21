@@ -28,7 +28,6 @@ public class HistoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_history);
         preferences = getSharedPreferences("values",MODE_PRIVATE);
         preferences.edit().clear().apply();
-        username = getIntent().getExtras().getString("username");
         welcomeUser = (TextView) findViewById(R.id.welcomeText);
         welcomeUser.setText(getString(R.string.order_history, username));
 }

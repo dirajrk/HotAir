@@ -13,7 +13,6 @@ public class NotifActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notif);
-        username = getIntent().getExtras().getString("username");
         welcomeText = (TextView) findViewById(R.id.welcomeText);
         welcomeText.setText(getString(R.string.welcome_messages, username));
     }

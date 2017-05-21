@@ -63,10 +63,5 @@ public class Report extends AppCompatActivity {
         }
     }
 
-    public void Nav(View view){
-        Intent intent = new Intent(this, NavActivity.class);
-        startActivity(intent);
-    }
-
 
 }
