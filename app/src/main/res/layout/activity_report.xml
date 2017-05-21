@@ -117,6 +117,7 @@
                 android:orientation="vertical"
                 android:layout_marginRight="50dp">
                 <ImageButton
+                    android:id="@+id/trackButton"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center"
@@ -133,14 +134,15 @@
                 android:layout_height="120dp"
                 android:orientation="vertical">
                 <ImageButton
+                    android:id="@+id/navButton"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/warning" />
+                    android:background="@drawable/map" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Report"
+                    android:text="Location"
                     android:layout_gravity="center"/>
             </LinearLayout>
 
@@ -160,6 +162,7 @@
                 android:layout_marginRight="50dp">
 
                 <ImageButton
+                    android:id="@+id/historyButton"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:background="@drawable/history"
@@ -178,6 +181,7 @@
                 android:orientation="vertical">
 
                 <ImageButton
+                    android:id="@+id/notifButton"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:background="@drawable/notif"

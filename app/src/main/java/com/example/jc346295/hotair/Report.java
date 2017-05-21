@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -12,6 +13,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Report extends AppCompatActivity {
+    ImageButton historyButton;
+    ImageButton trackButton;
+    ImageButton notifButton;
+    ImageButton navButton;
     private Spinner spinner;
     private Spinner issue;
 
@@ -28,6 +33,11 @@ public class Report extends AppCompatActivity {
         issue.add("Dead on arrival");
         issue.add("Wrong item");
 
+        historyButton = (ImageButton) findViewById(R.id.historyButton);
+        trackButton = (ImageButton) findViewById(R.id.trackButton);
+        notifButton = (ImageButton) findViewById(R.id.notifButton);
+        navButton = (ImageButton) findViewById(R.id.navButton);
+
 
         Spinner spinner = (Spinner) findViewById(R.id.orderID);
         Spinner issues = (Spinner) findViewById(R.id.reportID);
@@ -37,7 +47,20 @@ public class Report extends AppCompatActivity {
         issues.setAdapter(issueArrayAdapter);
     }
 
-    public void onClick(){
+    public void onClick(View view){
+        if (view == historyButton) {
+            Intent intent = new Intent(this, HistoryActivity.class);
+            startActivity(intent);
+        } else if (view == trackButton) {
+            Intent intent = new Intent(this, TrackActivity.class);
+            startActivity(intent);
+        } else if (view == navButton) {
+            Intent intent = new Intent(this, NavActivity.class);
+            startActivity(intent);
+        } else if (view == notifButton) {
+            Intent intent = new Intent(this, NotifActivity.class);
+            startActivity(intent);
+        }
 
     }
 
