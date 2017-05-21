@@ -99,51 +99,56 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_gravity="center"
+            android:layout_marginBottom="0dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="0dp">
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="100dp"
                 android:layout_height="120dp"
-                android:orientation="vertical"
-                android:layout_marginRight="50dp">
+                android:layout_marginRight="50dp"
+                android:orientation="vertical">
+
                 <ImageButton
                     android:id="@+id/trackButton"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center"
                     android:background="@drawable/track" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Track"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:text="Track" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="100dp"
                 android:layout_height="120dp"
                 android:orientation="vertical">
+
                 <ImageButton
                     android:id="@+id/navButton"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/map" />
+                    android:background="@drawable/map"
+                    android:onClick="Nav"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Location"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:text="Location" />
             </LinearLayout>
 
         </LinearLayout>
@@ -152,27 +157,28 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="100dp"
                 android:layout_height="120dp"
-                android:orientation="vertical"
-                android:layout_marginRight="50dp">
+                android:layout_marginRight="50dp"
+                android:orientation="vertical">
 
                 <ImageButton
                     android:id="@+id/historyButton"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
-                    android:background="@drawable/history"
                     android:layout_gravity="center"
-                    android:onClick="history"/>
+                    android:background="@drawable/history"
+                    android:onClick="history" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="History"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:text="History" />
             </LinearLayout>
 
             <LinearLayout
@@ -184,18 +190,17 @@
                     android:id="@+id/notifButton"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
-                    android:background="@drawable/notif"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:background="@drawable/notif" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Notification"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:text="Notification" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
-
 
 
 </LinearLayout>

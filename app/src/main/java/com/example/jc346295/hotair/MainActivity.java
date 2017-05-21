@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view){
         if (view == reportButton) {
             Intent intent = new Intent(this, Report.class);
+            intent.putExtra("username",username);
             startActivity(intent);
         } else if (view == historyButton) {
             Intent intent = new Intent(this, HistoryActivity.class);
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         } else if (view == trackButton) {
             Intent intent = new Intent(this, TrackActivity.class);
+            intent.putExtra("username",username);
             startActivity(intent);
         } else if (view == navButton) {
             Intent intent = new Intent(this, NavActivity.class);

@@ -20,6 +20,7 @@ public class HistoryActivity extends AppCompatActivity {
     ArrayAdapter<Java> stringArray;
     SharedPreferences preferences;
     TextView welcomeUser;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +28,10 @@ public class HistoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_history);
         preferences = getSharedPreferences("values",MODE_PRIVATE);
         preferences.edit().clear().apply();
-        String username = getIntent().getExtras().getString("username");
-        welcomeUser = (TextView) findViewById(R.id.userWelcome);
-        welcomeUser.setText(getString(R.string.welcome_messages, username));
-    }
+        username = getIntent().getExtras().getString("username");
+        welcomeUser = (TextView) findViewById(R.id.welcomeText);
+        welcomeUser.setText(getString(R.string.order_history, username));
+}
 
     public void Home(View view){
         Intent intent = new Intent(this,MainActivity.class);
