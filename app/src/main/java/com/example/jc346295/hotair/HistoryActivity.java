@@ -25,12 +25,7 @@ public class HistoryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_history);
-        preferences = getSharedPreferences("values",MODE_PRIVATE);
-        preferences.edit().clear().apply();
-        welcomeUser = (TextView) findViewById(R.id.welcomeText);
-        welcomeUser.setText(getString(R.string.order_history, username));
-}
+        setContentView(R.layout.activity_history);}
 
     public void Home(View view){
         Intent intent = new Intent(this,MainActivity.class);

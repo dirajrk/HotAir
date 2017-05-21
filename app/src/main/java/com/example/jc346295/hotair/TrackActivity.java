@@ -4,15 +4,23 @@ package com.example.jc346295.hotair;
  * Created by Diraj Ravikumar on 14/5/17.
  */
 
+import android.*;
+import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -23,9 +31,11 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import static android.content.ContentValues.TAG;
+
 
 public class TrackActivity extends AppCompatActivity implements OnMapReadyCallback, LocationListener {
-    ImageButton reportButton;
+    ImageButton locationButton;
     ImageButton historyButton;
     ImageButton trackButton;
     ImageButton notifButton;
@@ -55,7 +65,7 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
         }
         locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1, 1, this);
 
-        reportButton = (ImageButton) findViewById(R.id.reportButton);
+        locationButton = (ImageButton) findViewById(R.id.locationButton);
         historyButton = (ImageButton) findViewById(R.id.historyButton);
         trackButton = (ImageButton) findViewById(R.id.trackButton);
         notifButton = (ImageButton) findViewById(R.id.notifButton);
@@ -63,8 +73,8 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
     }
 
     public void onClick(View view) {
-        if (view == reportButton) {
-            Intent intent = new Intent(this, Report.class);
+        if (view == locationButton) {
+            Intent intent = new Intent(this, NavActivity.class);
             startActivity(intent);
         } else if (view == historyButton) {
             Intent intent = new Intent(this, HistoryActivity.class);
@@ -116,5 +126,42 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
     public void onProviderDisabled(String s) {
 
     }
-
+/***
+    public boolean getMapPermission(final Context context, Activity activity) {
+        if (ActivityCompat.checkSelfPermission(this , Manifest.permission.ACCESS_COARSE_LOCATION)
+                // If user grants permission
+                == PackageManager.PERMISSION_GRANTED) {
+            Log.v(TAG,"Permission is granted");
+            return true;
+        } else {
+            // If user revokes permission
+            Log.v(TAG,"Permission is revoked");
+            if(ActivityCompat.shouldShowRequestPermissionRationale(TrackActivity.this,
+                    Manifest.permission.ACCESS_COARSE_LOCATION)) {
+                new AlertDialog.Builder(context)
+                        .setTitle(this.getString(R.string.permission_request))
+                        .setMessage(this.getString(R.string.location_permission))
+                        .setPositiveButton(this.getString(R.string.continue_settings), new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent i = new Intent
+                                        (android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                                i.addCategory(Intent.CATEGORY_DEFAULT);
+                                i.setData(Uri.parse("package:" + getPackageName()));
+                                startActivity(i);
+                            }
+                        })
+                        .setNegativeButton(this.getString(R.string.not_now), new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                Log.d(TAG, "onClick: Cancelled Permission from App Info");
+                            }
+                        })
+                        .show();
+            }
+            else
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
+            return false;
+        }
+    }
+***/
 }
