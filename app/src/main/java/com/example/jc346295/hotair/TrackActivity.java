@@ -23,6 +23,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -30,6 +31,7 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.vision.text.Text;
 
 import static android.content.ContentValues.TAG;
 
@@ -42,11 +44,16 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
     ImageButton homeButton;
     GoogleMap map;
     LocationManager locationManager;
+    String username;
+    TextView welcomeUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_track);
+        username = getIntent().getExtras().getString("username");
+        welcomeUser = (TextView) findViewById(R.id.welcomeText);
+        welcomeUser.setText(getString(R.string.welcome_messages, username));
 
         MapFragment mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -72,23 +79,29 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
         homeButton = (ImageButton) findViewById(R.id.homeButton);
     }
 
-    public void onClick(View view) {
-        if (view == locationButton) {
-            Intent intent = new Intent(this, NavActivity.class);
-            startActivity(intent);
-        } else if (view == historyButton) {
-            Intent intent = new Intent(this, HistoryActivity.class);
-            startActivity(intent);
-        } else if (view == trackButton) {
-            Intent intent = new Intent(this, TrackActivity.class);
-            startActivity(intent);
-        } else if (view == homeButton) {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-        } else if (view == notifButton) {
-            Intent intent = new Intent(this, NotifActivity.class);
-            startActivity(intent);
-        }
+
+    public void location(View view){
+        Intent intent = new Intent(this, NavActivity.class);
+        intent.putExtra("username",username);
+        startActivity(intent);
+    }
+
+    public void history(View view){
+        Intent intent = new Intent(this, HistoryActivity.class);
+        intent.putExtra("username",username);
+        startActivity(intent);
+    }
+
+    public void report(View view){
+        Intent intent = new Intent(this, Report.class);
+        intent.putExtra("username",username);
+        startActivity(intent);
+    }
+
+    public void notif(View view){
+        Intent intent = new Intent(this,NotifActivity.class);
+        intent.putExtra("username",username);
+        startActivity(intent);
     }
 
     @Override

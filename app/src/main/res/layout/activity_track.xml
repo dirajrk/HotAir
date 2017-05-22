@@ -48,7 +48,7 @@
             android:layout_gravity="center_vertical"
             android:layout_below="@id/orderMessage"
             android:layout_marginLeft="40sp"
-            android:onClick="onClick"
+            android:onClick="location"
             android:background="@drawable/plus"
             android:padding="10sp" />
     </LinearLayout>
@@ -114,7 +114,7 @@
                     android:layout_width="75sp"
                     android:layout_height="75sp"
                     android:layout_gravity="center"
-                    android:onClick="onClick"
+                    android:onClick="track"
                     android:background="@drawable/map" />
 
                 <TextView
@@ -134,7 +134,7 @@
                     android:layout_width="75sp"
                     android:layout_height="75sp"
                     android:layout_gravity="center"
-                    android:onClick="onClick"
+                    android:onClick="report"
                     android:background="@drawable/warning" />
 
                 <TextView
@@ -165,7 +165,7 @@
                     android:layout_width="75sp"
                     android:layout_height="75sp"
                     android:layout_gravity="center"
-                    android:onClick="onClick"
+                    android:onClick="history"
                     android:background="@drawable/history" />
 
                 <TextView
@@ -185,7 +185,7 @@
                     android:layout_width="75sp"
                     android:layout_height="75sp"
                     android:layout_gravity="center"
-                    android:onClick="onClick"
+                    android:onClick="notif"
                     android:background="@drawable/notif" />
 
                 <TextView

@@ -109,7 +109,7 @@
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center"
-                    android:onClick="onClick"
+                    android:onClick="track"
                     android:id="@+id/trackButton"
                     android:background="@drawable/track" />
 
@@ -129,7 +129,7 @@
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center"
-                    android:onClick="onClick"
+                    android:onClick="report"
                     android:id="@+id/reportButton"
                     android:background="@drawable/warning" />
 
@@ -159,7 +159,7 @@
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center"
-                    android:onClick="onClick"
+                    android:onClick="history"
                     android:id="@+id/historyButton"
                     android:background="@drawable/history" />
 
@@ -179,7 +179,7 @@
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center"
-                    android:onClick="onClick"
+                    android:onClick="notif"
                     android:id="@+id/locationButton"
                     android:background="@drawable/map" />
 

@@ -47,9 +47,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         } else if (view == navButton) {
             Intent intent = new Intent(this, NavActivity.class);
+            intent.putExtra("username",username);
             startActivity(intent);
         } else if (view == notifButton) {
             Intent intent = new Intent(this, NotifActivity.class);
+            intent.putExtra("username",username);
             startActivity(intent);
         }
 

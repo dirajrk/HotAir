@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,6 +18,8 @@ public class Report extends AppCompatActivity {
     ImageButton trackButton;
     ImageButton notifButton;
     ImageButton navButton;
+    String username;
+    TextView welcomeText;
     private Spinner spinner;
     private Spinner issue;
 
@@ -24,6 +27,9 @@ public class Report extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report);
+        username = getIntent().getExtras().getString("username");
+        welcomeText = (TextView) findViewById(R.id.welcomeText);
+        welcomeText.setText(getString(R.string.welcome_messages, username));
 
         //this should be declared in orders, so it won't be always declared here onCreate
         List<String> orders = new ArrayList<>();
@@ -63,5 +69,15 @@ public class Report extends AppCompatActivity {
         }
     }
 
+    public void notif(View view){
+        Intent intent = new Intent(this,NotifActivity.class);
+        intent.putExtra("username",username);
+        startActivity(intent);
+    }
 
+    public void track(View view){
+        Intent intent = new Intent(this,TrackActivity.class);
+        intent.putExtra("username",username);
+        startActivity(intent);
+    }
 }
