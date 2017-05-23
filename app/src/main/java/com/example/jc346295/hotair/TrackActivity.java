@@ -104,6 +104,7 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
         startActivity(intent);
     }
 
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;

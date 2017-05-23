@@ -19,13 +19,16 @@ public class HistoryActivity extends AppCompatActivity {
 
     ArrayAdapter<Java> stringArray;
     SharedPreferences preferences;
-    TextView welcomeUser;
+    TextView welcomeText;
     String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
+        username = getIntent().getExtras().getString("username");
+        welcomeText = (TextView) findViewById(R.id.welcomeText);
+        welcomeText.setText(getString(R.string.order_history, username));
     }
 
     public void Home(View view){
@@ -45,11 +48,34 @@ public class HistoryActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(stringArray);
 
-        Map<String,?> keys = preferences.getAll();
+/*        Map<String,?> keys = preferences.getAll();
         for (Map.Entry<String,?> entry : keys.entrySet())
         {
             stringArray.add(new Java(entry.getKey(),entry.getValue().toString()));
         }
+        */
 
+    }
+
+    public void location(View view){
+        Intent intent = new Intent(this,NavActivity.class);
+        intent.putExtra("username",username);
+        startActivity(intent);
+    }
+
+    public void track(View view){
+        Intent intent = new Intent(this,TrackActivity.class);
+        intent.putExtra("username",username);
+        startActivity(intent);
+    }
+    public void notif(View view){
+        Intent intent = new Intent(this,NotifActivity.class);
+        intent.putExtra("username",username);
+        startActivity(intent);
+    }
+    public void report(View view){
+        Intent intent = new Intent(this,Report.class);
+        intent.putExtra("username",username);
+        startActivity(intent);
     }
 }

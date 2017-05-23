@@ -26,26 +26,8 @@ public class NotifActivity extends AppCompatActivity {
         welcomeText.setText(getString(R.string.welcome_messages, username));
     }
 
-    public void onClick(View view) {
-        if (view == locationButton) {
-            Intent intent = new Intent(this, NavActivity.class);
-            startActivity(intent);
-        } else if (view == historyButton) {
-            Intent intent = new Intent(this, HistoryActivity.class);
-            startActivity(intent);
-        } else if (view == trackButton) {
-            Intent intent = new Intent(this, TrackActivity.class);
-            startActivity(intent);
-        } else if (view == homeButton) {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-        } else if (view == notifButton) {
-            Intent intent = new Intent(this, NotifActivity.class);
-            startActivity(intent);
-        }
-    }
-    public void notif(View view){
-        Intent intent = new Intent(this,NotifActivity.class);
+    public void location(View view){
+        Intent intent = new Intent(this,NavActivity.class);
         intent.putExtra("username",username);
         startActivity(intent);
     }

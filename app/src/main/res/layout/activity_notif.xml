@@ -72,15 +72,23 @@
 
     <LinearLayout
         android:layout_width="200dp"
-        android:layout_height="200dp">
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
 
-        <com.google.android.gms.maps.MapView
-            android:id="@+id/mapview"
+        <ImageButton
+            android:layout_width="155dp"
+            android:layout_height="155dp"
+            android:layout_gravity="center"
+            android:onClick="onClick"
+            android:id="@+id/landButton"
+            android:background="@drawable/plus" />
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:apiKey="AIzaSyDtqIHieJtPdmM4qeugKNoYS9n3eXBh4fc"
-            android:clickable="true" />
+            android:layout_gravity="center"
+            android:text="Land Now" />
     </LinearLayout>
 
 
@@ -179,7 +187,7 @@
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center"
-                    android:onClick="notif"
+                    android:onClick="location"
                     android:id="@+id/locationButton"
                     android:background="@drawable/map" />
 
@@ -187,7 +195,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Notification" />
+                    android:text="Location" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
