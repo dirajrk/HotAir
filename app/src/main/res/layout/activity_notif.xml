@@ -15,37 +15,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="@string/welcome_messages" />
-
-        <ImageButton
-            android:id="@+id/homeButton"
-            android:layout_width="25sp"
-            android:layout_height="25sp"
-            android:layout_marginLeft="250dp"
-            android:background="@drawable/home"
-            android:padding="10dp" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/orderTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:text="@string/ordermsg" />
-
-        <TextView
-            android:id="@+id/orderDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/orderdate" />
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -61,27 +33,12 @@
             android:layout_weight="1"
             android:text="@string/etamsg" />
 
-        <TextView
-            android:id="@+id/etaDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/etadate" />
-
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="200dp"
-        android:layout_height="200dp">
-
-        <com.google.android.gms.maps.MapView
-            android:id="@+id/mapview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:apiKey="AIzaSyDtqIHieJtPdmM4qeugKNoYS9n3eXBh4fc"
-            android:clickable="true" />
-    </LinearLayout>
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
 
 
     <LinearLayout
@@ -109,7 +66,7 @@
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center"
-                    android:onClick="track"
+                    android:onClick="onClick"
                     android:id="@+id/trackButton"
                     android:background="@drawable/track" />
 
@@ -117,7 +74,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Track" />
+                    android:text="Track"
+                    android:onClick="onClick"/>
             </LinearLayout>
 
             <LinearLayout
@@ -129,7 +87,7 @@
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center"
-                    android:onClick="report"
+                    android:onClick="onClick"
                     android:id="@+id/reportButton"
                     android:background="@drawable/warning" />
 
@@ -159,7 +117,7 @@
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center"
-                    android:onClick="history"
+                    android:onClick="onClick"
                     android:id="@+id/historyButton"
                     android:background="@drawable/history" />
 
@@ -167,7 +125,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="History" />
+                    android:text="History"
+                    android:onClick="onClick"/>
             </LinearLayout>
 
             <LinearLayout
@@ -179,7 +138,7 @@
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center"
-                    android:onClick="notif"
+                    android:onClick="onClick"
                     android:id="@+id/locationButton"
                     android:background="@drawable/map" />
 
@@ -187,7 +146,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Notification" />
+                    android:text="Location" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

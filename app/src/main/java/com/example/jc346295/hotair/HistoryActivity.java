@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -21,6 +22,12 @@ public class HistoryActivity extends AppCompatActivity {
     SharedPreferences preferences;
     TextView welcomeUser;
     String username;
+    ImageButton reportButton;
+    ImageButton historyButton;
+    ImageButton trackButton;
+    ImageButton notifButton;
+    ImageButton navButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +35,25 @@ public class HistoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_history);
     }
 
-    public void Home(View view){
-        Intent intent = new Intent(this,MainActivity.class);
-        startActivity(intent);
-
+    public void onClick(View view) {
+        reportButton = (ImageButton) findViewById(R.id.reportButton);
+        historyButton = (ImageButton) findViewById(R.id.historyButton);
+        trackButton = (ImageButton) findViewById(R.id.trackButton);
+        notifButton = (ImageButton) findViewById(R.id.notifButton);
+        navButton = (ImageButton) findViewById(R.id.navButton);
+        if (view == navButton) {
+            Intent intent = new Intent(this, NavActivity.class);
+            startActivity(intent);
+        } else if (view == historyButton) {
+            Intent intent = new Intent(this, HistoryActivity.class);
+            startActivity(intent);
+        } else if (view == trackButton) {
+            Intent intent = new Intent(this, TrackActivity.class);
+            startActivity(intent);
+        } else if (view == notifButton) {
+            Intent intent = new Intent(this, NotifActivity.class);
+            startActivity(intent);
+        }
     }
 
     protected void onStart(){
@@ -45,11 +67,6 @@ public class HistoryActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(stringArray);
 
-        Map<String,?> keys = preferences.getAll();
-        for (Map.Entry<String,?> entry : keys.entrySet())
-        {
-            stringArray.add(new Java(entry.getKey(),entry.getValue().toString()));
-        }
 
     }
 }

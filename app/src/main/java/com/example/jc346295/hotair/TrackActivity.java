@@ -80,29 +80,6 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
     }
 
 
-    public void location(View view){
-        Intent intent = new Intent(this, NavActivity.class);
-        intent.putExtra("username",username);
-        startActivity(intent);
-    }
-
-    public void history(View view){
-        Intent intent = new Intent(this, HistoryActivity.class);
-        intent.putExtra("username",username);
-        startActivity(intent);
-    }
-
-    public void report(View view){
-        Intent intent = new Intent(this, Report.class);
-        intent.putExtra("username",username);
-        startActivity(intent);
-    }
-
-    public void notif(View view){
-        Intent intent = new Intent(this,NotifActivity.class);
-        intent.putExtra("username",username);
-        startActivity(intent);
-    }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {

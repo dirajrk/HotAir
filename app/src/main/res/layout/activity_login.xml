@@ -42,7 +42,8 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:layout_marginTop="360dp"
-        android:layout_gravity="center_vertical">
+        android:layout_gravity="center_vertical"
+        android:weightSum="1">
 
         <TextView
             android:layout_width="wrap_content"
@@ -53,9 +54,11 @@
             android:layout_marginLeft="10dp"/>
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_marginLeft="235dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="235dp"
+            android:layout_weight="1"
             android:text="@string/forgot_pw" />
 
     </LinearLayout>
