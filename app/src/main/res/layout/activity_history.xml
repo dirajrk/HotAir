@@ -10,6 +10,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:text="@string/order_history" />
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_marginLeft="275sp"
+            android:background="@drawable/home"
+            android:padding="10sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -57,6 +71,7 @@
                     android:id="@+id/trackButton"
                     android:layout_width="75sp"
                     android:layout_height="75sp"
+                    android:onClick="track"
                     android:layout_gravity="center"
                     android:onClick="onClick"
                     android:background="@drawable/track" />
@@ -78,6 +93,7 @@
                     android:layout_width="75sp"
                     android:layout_height="75sp"
                     android:layout_gravity="center"
+                    android:onClick="report"
                     android:background="@drawable/warning" />
 
                 <TextView
@@ -108,13 +124,14 @@
                     android:layout_width="75sp"
                     android:layout_height="75sp"
                     android:layout_gravity="center"
-                    android:background="@drawable/history" />
+                    android:onClick="location"
+                    android:background="@drawable/map" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="History" />
+                    android:text="Location" />
             </LinearLayout>
 
             <LinearLayout
@@ -127,6 +144,7 @@
                     android:layout_width="75sp"
                     android:layout_height="75sp"
                     android:layout_gravity="center"
+                    android:onClick="notif"
                     android:background="@drawable/notif" />
 
                 <TextView
